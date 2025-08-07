@@ -22,7 +22,7 @@
     border : 10px solid firebrick
 }
 
-@media(min-width : 400px){
+@media(min-width : 700px){
     .columns{
         flex-direction: row;
     }
