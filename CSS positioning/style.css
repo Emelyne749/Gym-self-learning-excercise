@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.container{
+    border: 5px solid red;
+}
+
+/* .article-title{
+    margin: 0;
+    background: rgb(96, 13, 96);
+    color: white;
+
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+
+
+} */
+
+.header{
+    position: sticky;
+    z-index: 10;
+    top : 0;
+    left: 0;
+    right: 0;
+}
+
+
