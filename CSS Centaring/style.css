@@ -6,15 +6,28 @@
 
 .container{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    /* justify-content: center;
+    align-content: center; */
+    /* justify-items: center;
+    align-items: center; 
+    place-items: center;*/
+    
 }
 
 .box-1{
     height: 120px;
     width: 120px;
     background-color: aqua;
+    border : 2px solid black;
+
+}
+
+.box-2{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(231, 82, 201);
     border : 2px solid black;
 
 }
