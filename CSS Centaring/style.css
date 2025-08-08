@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-1{
+    height: 120px;
+    width: 120px;
+    background-color: aqua;
+    border : 2px solid black;
+
+}
