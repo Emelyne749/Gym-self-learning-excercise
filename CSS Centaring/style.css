@@ -6,21 +6,16 @@
 
 .container{
     height: 100vh;
-    position:relative
-
+    display: flex;
     
 }
 
 .box-1{
-    position:absolute;
     height: 120px;
     width: 120px;
     background-color: aqua;
     border : 2px solid black;
 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%,-50%)
+    margin: auto;
 
 }
