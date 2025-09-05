@@ -3,13 +3,13 @@
 
 function getWeather(){
     return new Promise(function(resolve, reject){
-        setTimeout(()=> reject("sunny"), 100 )
+        setTimeout(()=> resolve("sunny"), 100 )
 
     })
 }
     
 function fulfilled(data){
-    console.log(data)
+    console.log(`today's weather is ${data}`)
 }
 
 function rejected(data){
