@@ -3,7 +3,7 @@
 
 function getWeather(){
     return new Promise(function(resolve, reject){
-        setTimeout(()=> resolve("sunny"), 100 )
+        setTimeout(()=> rejected("sunny"), 100 )
 
     })
 }
@@ -17,4 +17,4 @@ function rejected(data){
 }
 
 const weather = getWeather()
-weather.then(fulfilled, rejected)
+weather.then(fulfilled).catch(rejected)
