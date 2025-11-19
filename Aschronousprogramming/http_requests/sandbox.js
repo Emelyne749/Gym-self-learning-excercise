@@ -1,4 +1,4 @@
-const getTodos = ((callback)=>{
+const getTodos = ((resource, callback)=>{
 
     const request = new XMLHttpRequest()
 
@@ -13,7 +13,7 @@ const getTodos = ((callback)=>{
         }
     })
 
-    request.open('GET', 'https://jsonplaceholder.typicode.com/todos/')
+    request.open('GET', resource)
     request.send()
 
 
@@ -22,14 +22,14 @@ const getTodos = ((callback)=>{
 console.log(1)
 console.log(2)
 
-getTodos((error, data)=>{
-    console.log("Callback fired")
-    if(error){
-        console.log("Couldn't fetch data")
-    }
-    else{
+getTodos('elliot.json',(data)=>{
+    console.log(data)
+    getTodos('mario.json',(data)=>{
         console.log(data)
-    }
+        getTodos('harry.json',(data)=>{
+        console.log(data)
+        })
+    })
 })
 
 
