@@ -1,0 +1,8 @@
+{
+  "name": "Jannette",
+  "address": {
+    "street": "123 Main St",
+    "city": "Newyork",
+    "zipcode": "50000"
+  }
+}
