@@ -18,5 +18,11 @@ const getTodos = ( resource =>{
     })
 })   
     
-getTodos('mario.json').then((data)=>console.log("The output is :", data)).catch((error)=>console.log("The output is :", error))
+getTodos('/Aschronousprogramming/http_requests/elliot.json').then((data)=>{
+    console.log("The 1st output is :", data)
+    return getTodos('/Aschronousprogramming/http_requests/mario.json')
+}).then((data) =>{
+    console.log("The 2nd out put is :",data)
+    return getTodos('/Aschronousprogramming/http_requests/harry.json')
+}).then((data)=>console.log("The 3rd output is :", data)).catch((error)=>console.log("The output is :", error))
 
