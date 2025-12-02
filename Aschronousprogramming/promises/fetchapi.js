@@ -1,11 +1,13 @@
 const getTodos = async () =>{
     const response = await fetch('elliot.json')
     const data = await response.json()
-    console.log('resolved', data)
+    
+    return data
 
 }
 
 getTodos()
+.then(resp => console.log('resolved',resp))
 
 
 
