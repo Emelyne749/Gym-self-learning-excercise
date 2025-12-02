@@ -1,5 +1,9 @@
 const getTodos = async () =>{
-    const response = await fetch('elliot.json')
+    const response = await fetch('elliots.json')
+    if(response.status != 200){
+        throw new Error('Can not fetch the data')
+    }
+
     const data = await response.json()
     
     return data
@@ -8,6 +12,7 @@ const getTodos = async () =>{
 
 getTodos()
 .then(resp => console.log('resolved',resp))
+.catch(err=> console.log('rejected',err.message))
 
 
 
