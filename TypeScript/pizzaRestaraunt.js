@@ -7,11 +7,12 @@ const menu = [
 
 
 let cashInRegister = 100
-const orderQue = []
+let orderQue = []
+let nextOrderId = 0
 
 function AddNewPizza(pizza){
     menu.push(pizza)
-}
+} 
 
 
 function placeOrder(pname){
@@ -26,9 +27,16 @@ function placeOrder(pname){
     })
 
     cashInRegister = cashInRegister + pizza.price
-    orderObj = {pizza:pizza , status : 'ordered'}
+    orderObj = {pizza:pizza , status : 'ordered', id:nextOrderId}
     orderQue.push(orderObj)
+    nextOrderId++
     return orderObj
 }
 
-console.log(placeOrder("Pepperoni"))
+
+function completeOrder(orderID){
+    let completedOrder = orderQue.filter(order => order.id = orderID)
+    completedOrder.status = "completed"
+
+    return completedOrder
+}
