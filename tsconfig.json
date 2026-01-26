@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // Module system
+    "module": "CommonJS",
+    "target": "ES2020",
+    "moduleResolution": "node",
+
+    // Type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Output
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Skip library type checks
+    "skipLibCheck": true
+  }
+}
