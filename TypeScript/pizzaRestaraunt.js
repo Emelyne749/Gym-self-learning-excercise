@@ -11,6 +11,7 @@ let cashInRegister = 100
 let orderQue = []
 let nextOrderId = 0
 
+
 function AddNewPizza(pizza){
     menu.push(pizza)
 } 
