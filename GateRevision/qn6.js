@@ -24,5 +24,5 @@ async function counterlimit() {
     return res
 }
 
-counterlimit().then(x=>console.log(x))
+counterlimit().then(x => console.log(x))
 
