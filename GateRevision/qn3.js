@@ -2,26 +2,26 @@
 // https://jsonplaceholder.typicode.com/users
 
 
-const url = "https://jsonplaceholder.typicode.com/users";
+const url = "https://jsonplaceholder.typicode.com/users"
 
 async function fetchWithTimeout(url, ms) {
-    const controller = new AbortController();
-    const signal = controller.signal;
+    const controller = new AbortController()
+    const signal = controller.signal
     const timer = setTimeout(() => {
-        controller.abort();
-    }, ms);
+        controller.abort()
+    }, ms)
 
     try {
-        const response = await fetch(url, { signal });
-        const data = await response.json();
-        clearTimeout(timer); // Cancel the timer if we succeeded!
-        return data;
+        const response = await fetch(url, { signal })
+        const data = await response.json()
+        clearTimeout(timer)
+        return data
     } catch (error) {
         if (error.name === 'AbortError') {
-            return "Request timed out and was aborted!";
+            return "Request timed out and was aborted!"
         }
-        throw error;
+        throw error
     }
 }
 
-fetchWithTimeout(url, 5).then(console.log);
+fetchWithTimeout(url, 5).then(console.log)
